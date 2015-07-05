@@ -11,6 +11,12 @@ def chunk_to_html(chunk)
   end
 end
 
+def inner_text(text)
+  text.gsub("**").each_with_index { |_, i| "<#{"/" if i.odd?}strong>" }
+      .gsub("*").each_with_index { |_, i| "<#{"/" if i.odd?}em>" }
+      .gsub("&", "&amp;")
+end
+
 input_filename = ARGV[0]
 output_filename = ARGV[1]
 markdown = File.read input_filename
