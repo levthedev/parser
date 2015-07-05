@@ -1,3 +1,7 @@
+def to_html(markdown)
+  markdown.split("\n\n").map { |chunk| chunk_to_html chunk }.join("\n\n")
+end
+
 input_filename = ARGV[0]
 output_filename = ARGV[1]
 markdown = File.read input_filename
