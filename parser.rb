@@ -5,7 +5,7 @@ end
 def chunk_to_html(chunk)
   if chunk.start_with? "#"
     hashes, text = chunk.split(" ", 2)
-    "<h#{hashes.length}>#{inner_text text}</h#{hashes.length}"
+    "<h#{hashes.length}>#{inner_text text}</h#{hashes.length}>"
   else
     "<p>\n#{inner_text(chunk).lines.map { |line| " #{line.chomp}\n" }.join}</p>"
   end
