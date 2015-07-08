@@ -1,2 +1,2 @@
 ##Parser
-This is a basic Markdown to HTML parser. I'm trying to build it to be as sleek and easily useable as possible - currently it clocks in at 25 lines of code. It converts headers of arbitrary size, paragraphs, strong tags, emphasis tags, and links to valid HTML. The next step is to tackle links with a title, ordered/unordered links, and a few other small things (maybe add support for code snippets?).
+This is a basic Markdown to HTML parser. I'm trying to build it to be as sleek and easily useable as possible - currently it clocks in at 25 lines of code. It converts headers of arbitrary size, paragraphs, strong tags, emphasis tags, and links to valid HTML. The next step is to tackle special case links, ordered/unordered lists, and support for code snippets.
