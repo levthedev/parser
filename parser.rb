@@ -15,7 +15,7 @@ def inner_text(text)
   text.gsub("**").each_with_index { |_, i| "<#{"/" if i.odd?}strong>" }
       .gsub("*").each_with_index { |_, i| "<#{"/" if i.odd?}em>" }
       .gsub("&", "&amp;")
-      .gsub /\[([^\]]+)\]\(([^)]+)\)/, '<a href="\2">\1</a>'
+      .gsub(/\[([^\]]+)\]\(([^)]+)\)/, '<a href="\2">\1</a>')
 end
 
 input_filename = ARGV[0]
